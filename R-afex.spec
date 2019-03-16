@@ -4,16 +4,12 @@
 #
 Name     : R-afex
 Version  : 0.23.0
-Release  : 7
+Release  : 8
 URL      : https://cran.r-project.org/src/contrib/afex_0.23-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/afex_0.23-0.tar.gz
 Summary  : Analysis of Factorial Experiments
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-car
-Requires: R-lme4
-Requires: R-lmerTest
-Requires: R-reshape2
 BuildRequires : R-car
 BuildRequires : R-lme4
 BuildRequires : R-lmerTest
@@ -34,10 +30,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1550596858
+export SOURCE_DATE_EPOCH=1552709962
 
 %install
-export SOURCE_DATE_EPOCH=1550596858
+export SOURCE_DATE_EPOCH=1552709962
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -73,8 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library afex|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  afex || :
 
 
 %files
