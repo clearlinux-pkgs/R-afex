@@ -4,6 +4,7 @@ R-car
 R-carData
 R-cellranger
 R-forcats
+R-ggplot2
 R-lme4
 R-lmerTest
 R-numDeriv
