@@ -4,7 +4,7 @@
 #
 Name     : R-afex
 Version  : 0.27.2
-Release  : 26
+Release  : 27
 URL      : https://cran.r-project.org/src/contrib/afex_0.27-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/afex_0.27-2.tar.gz
 Summary  : Analysis of Factorial Experiments
@@ -23,28 +23,29 @@ BuildRequires : R-reshape2
 BuildRequires : buildreq-R
 
 %description
-afex: Analysis of Factorial EXperiments
-=======================================
-<!-- badges: start -->
-[![CRAN status](https://www.r-pkg.org/badges/version/afex)](https://CRAN.R-project.org/package=afex) [![monthly downloads](http://cranlogs.r-pkg.org/badges/afex)](http://cranlogs.r-pkg.org/badges/afex) [![total downloads](http://cranlogs.r-pkg.org/badges/grand-total/afex)](http://cranlogs.r-pkg.org/badges/grand-total/afex) [![Research software impact](http://depsy.org/api/package/cran/afex/badge.svg)](http://depsy.org/package/r/afex) [![Travis-CI Build Status](https://travis-ci.org/singmann/afex.svg?branch=master)](https://travis-ci.org/singmann/afex) <!-- badges: end -->
+mixed models. aov_ez(), aov_car(), and aov_4() allow specification of
+         between, within (i.e., repeated-measures), or mixed (i.e., split-plot) 
+         ANOVAs for data in long format (i.e., one observation per row),
+         automatically aggregating multiple observations per individual and cell
 
 %prep
 %setup -q -c -n afex
+cd %{_builddir}/afex
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1585691158
+export SOURCE_DATE_EPOCH=1589775897
 
 %install
-export SOURCE_DATE_EPOCH=1585691158
+export SOURCE_DATE_EPOCH=1589775897
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
