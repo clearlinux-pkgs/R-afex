@@ -4,7 +4,7 @@
 #
 Name     : R-afex
 Version  : 1.2.0
-Release  : 51
+Release  : 52
 URL      : https://cran.r-project.org/src/contrib/afex_1.2-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/afex_1.2-0.tar.gz
 Summary  : Analysis of Factorial Experiments
