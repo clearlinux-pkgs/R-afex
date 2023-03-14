@@ -4,7 +4,7 @@
 #
 Name     : R-afex
 Version  : 1.2.1
-Release  : 53
+Release  : 54
 URL      : https://cran.r-project.org/src/contrib/afex_1.2-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/afex_1.2-1.tar.gz
 Summary  : Analysis of Factorial Experiments
@@ -21,9 +21,6 @@ BuildRequires : R-lmerTest
 BuildRequires : R-pbkrtest
 BuildRequires : R-reshape2
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 mixed models. aov_ez(), aov_car(), and aov_4() allow specification of
@@ -40,10 +37,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1673284218
+export SOURCE_DATE_EPOCH=1678810679
 
 %install
-export SOURCE_DATE_EPOCH=1673284218
+export SOURCE_DATE_EPOCH=1678810679
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
